@@ -1,0 +1,41 @@
+# test-me
+
+its asimple project which will help u understund bcrypt hashing password thats all
+no db is used the data will be in an array 
+ list of methods 
+ ####################################
+ 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕
+ you can coppy this methods in your nod project they will work just fine 
+ // ***************************🥩🍗🍗🍗 # Hash password
+const hashPassword = async (password,saltRounds = 10)=>{
+     try {
+         //Generate a salt
+         const salt = await bcrypt.genSalt(saltRounds)
+         // HashPassword & return it
+         return await bcrypt.hash(password,salt);
+     } catch (error) {
+         console.log(error);
+     }
+     // return null
+     return null
+}
+
+
+// ***************************🍗🍗🍗🥩 # Comparing passwords
+const comperPassword = async (password,DbHashedPassword) => {
+    try {
+        //compare password
+     return   await bcrypt.compare(password,DbHashedPassword)
+    } catch (error) {
+        console.log(error)
+    }
+    // if error  return false
+    return false
+}
+
+
+to run the project file just clone and run npm install
+///
+then run 
+node run dev     // this will run the server for u and u are all good thank you hope this will help u 
+understand hashing with bcrypt 
