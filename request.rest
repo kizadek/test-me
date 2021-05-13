@@ -1,0 +1,21 @@
+GET http://localhost:3000/users
+
+
+
+###
+
+POST http://localhost:3000/create
+Content-Type: application/json
+
+{
+    "password": "1333",
+    "name": "mike nsowa" 
+}
+
+###
+Post http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "password": "1335"
+}
